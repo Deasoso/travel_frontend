@@ -1,7 +1,11 @@
 <template>
   <div class="demo-page">
-    123213123123
-    {{title}}
+    <div v-for="(item, index) in data" :key="index" class="buttoncss">
+      <Button type="primary">{{item.name}}</Button>
+    </div>
+    <div v-if="bool" @click="methodname">
+      bool is true
+    </div>
   </div>
 </template>
 
@@ -9,12 +13,26 @@
 export default {
   data () {
     return {
-      title: '示例页面'
+      title: '示例页面',
+      data: [{
+        name: 'name2',
+        value: 10
+      },{
+        name: 'name4',
+        value: 1
+      },{
+        name: 'name7',
+        value: 12
+      },{
+        name: 'name51',
+        value: 15
+      },],     
+      bool: true 
     }
   },
   methods: {
-    mothedname () {
-
+    methodname () {
+      this.bool = false;
     }
   }
 }
@@ -23,5 +41,8 @@ export default {
 <style>
 .demo-page{
 
+}
+.buttoncss{
+  margin-top: 20px
 }
 </style>
