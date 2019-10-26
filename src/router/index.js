@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Index from '@/pages/Index/index'
 import TodoMVC from '@/pages/TodoMVC/index'
+import product from '@/pages/components/product'
 
 Vue.use(Router)
 
@@ -16,6 +17,12 @@ export default new Router({
       path: '/TodoMVC',
       name: 'TodoMVC',
       component: TodoMVC
+    }
+    ,
+    {
+      path: '/product',
+      name: 'product',
+      component: product
     }
   ]
 })
