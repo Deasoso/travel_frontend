@@ -1,6 +1,8 @@
 <template>
   <div class="demo-page">
     aaa
+    <Slider v-model="value" range />
+    <Button type="primary">Primary</Button>
     <h3 class="title"><span>欢迎打开{{title}}</span></h3>
     <button class="btn" @click="routeDetail">跳转到TodoMVC</button>
   </div>
