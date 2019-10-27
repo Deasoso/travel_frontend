@@ -1,10 +1,8 @@
 <template>
   <div class="demo-page">
-    aaa
-    <Slider v-model="value" range />
-    <Button type="primary">Primary</Button>
     <h3 class="title"><span>欢迎打开{{title}}</span></h3>
     <button class="btn" @click="routeDetail">跳转到TodoMVC</button>
+    <button class="btn" @click="info">跳转到商家信息</button>
   </div>
 </template>
 
@@ -20,6 +18,11 @@ export default {
       this.$router.push({
         path: '/TodoMVC',
         query: { userInfo: {name: 'John', id: 100}, flag: true, flag2: 'true' }
+      })
+    },
+    info(){
+      this.$router.push({
+        path: '/feedback'
       })
     }
   }
