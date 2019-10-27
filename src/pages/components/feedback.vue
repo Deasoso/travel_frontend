@@ -68,6 +68,7 @@ export default {
 </script>
 
 <style>
+  
   .all{
     margin-top: 10%; 
     margin-left: 20%;
