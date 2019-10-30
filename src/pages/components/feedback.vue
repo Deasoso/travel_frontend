@@ -1,43 +1,93 @@
+<style scoped>
+.layout{
+    border: 1px solid #d7dde4;
+    background: #f5f7f9;
+    position: relative;
+    border-radius: 4px;
+    overflow: hidden;
+}
+.layout-logo{
+    width: 100px;
+    height: 30px;
+    background: #5b6270;
+    border-radius: 10px;
+    float: left;
+    position: relative;
+    top: 15px;
+    left: 20px;
+}
+.layout-nav{
+    width: 420px;
+    margin: 0 auto;
+    float: inherit;
+    margin-right: 50%;
+}
+.layout-footer-center{
+    text-align: center;
+}
+</style>
 <template>
   <div class="page">
+    <Layout>
+        <Header>
+          <Menu mode="horizontal" theme="dark" active-name="1">
+            <div class="layout-logo">
+              <Icon type="ios-arrow-back"></Icon>
+            </div>
+            <div class="layout-nav">
+                <MenuItem>
+                    问题反馈
+                </MenuItem>
+            </div>
+          </Menu>
+        </Header>
+        <!-- <Content>Content</Content>
+        <Footer>Footer</Footer> -->
+        
+    </Layout>
     <div class="all">
-      <p class="form">Contact Form</p>
-      <p class="pl">Please fil all the text in the fileds</p>
-      <Card class="card">
-        <p>请选择反馈类型：</p>
-        <CheckboxGroup v-model="fruit" class="checkbox">
-          <Checkbox class="f" label="性能体验"></Checkbox>
-          <Checkbox class="f" label="功能异常"></Checkbox>
-          <Checkbox class="f" label="产品建议"></Checkbox>
-          <Checkbox class="f" label="商品投诉"></Checkbox>
-        </CheckboxGroup>
+      <p slot="title" class="form">
+        <!-- <Icon type="ios-arrow-back"></Icon>
+        问题反馈 -->
+      </p>
+      <p class="pl">使用以下表格将你的意见寄给我们，或报告你在此网站查找信息时遇到的问题，我们会仔细阅读你的反馈。</p>
+      <Card class="card" style="width:95%">        
+        <p class="feedb">我的反馈是关于：</p>
+        <RadioGroup v-model="phone">
+          <Radio label="性能体验">
+              <span class="radiogroup">性能体验</span>
+          </Radio>
+          <br>
+          <Radio label="功能异常">
+              <span class="radiogroup">功能异常</span>
+          </Radio>
+          <br>
+          <Radio label="产品建议">
+              <span class="radiogroup">产品建议</span>
+          </Radio>
+          <br>
+          <Radio label="商品投诉">
+              <span class="radiogroup">商品投诉</span>
+          </Radio>
+        </RadioGroup>
         <div class="describe">
           <ul>
             <p class="question">问题描述及建议：</p>
-            <Input v-model="value5"  type="textarea" :rows="5" placeholder="请协助填写提示信息和问题描述，将有助于我们更快地发现和解决问题。" style="width: 600px" />
+            <Input v-model="value5"  type="textarea" :rows="7" placeholder="请协助填写提示信息和问题描述，将有助于我们更快地发现和解决问题。" style="width: 90%" />
             <br>
             <p class="tel">联系方式：</p>
-            <Input v-model="value6" type="textarea" :rows="1" placeholder="请填写联系方式以便于联系。" style="width: 600px" />
+            <Input v-model="value6" type="textarea" :rows="1" placeholder="请填写联系方式以便于联系。" style="width: 90%" />
             <br>
-            <p class="upload">选择上传文件</p>
-            <!-- <Upload 
-              action="//jsonplaceholder.typicode.com/posts/">
-              <Button class="upbtn" size='large' icon="ios-cloud-upload-outline">Upload files</Button>
-            </Upload> -->
-            <Upload
-              multiple
-              type="drag"
-              action="//jsonplaceholder.typicode.com/posts/">
-              <div style="padding: 20px 0">
-                  <Icon type="ios-cloud-upload" size="50" style="color: #3399ff"></Icon>
-                  <p>Click or drag files here to upload</p>
-              </div>
+            <br>
+            <p>选择上传文件</p>
+            <Upload action="//jsonplaceholder.typicode.com/posts/">
+              <Button class="upload" icon="ios-cloud-upload-outline" size="large">Upload files</Button>
             </Upload>
           </ul>
         </div>
-        <Button class="click" size='large' type="primary" :loading="submit" icon="ios-paper-plane-outline" @click="tosubmit">
-          <span v-if="!submit">Submit</span>
-          <span v-else>submitting...</span>
+        <Button class="click" size="large" type="primary" :loading="submit" icon="ios-paper-plane-outline" @click="tosubmit">
+          <span v-if="!submit">提交</span>
+          <span v-else>提交中...</span>
         </Button>
       </Card>
     </div>
@@ -82,39 +132,45 @@ export default {
 
 <style>
   body {
-    /* widows: 100px; */
-    height:100px;
-    /* width: 100%; */
+    height:100%;
     background-size: cover;
-    /* background-image:url('http://www.51pptmoban.com/d/file/2018/03/09/19375a83fc004035fb1102a4551f2287.jpg'); */
-    background-image:url('http://www.zhicheng.com/uploadfile/2018/0816/20180816112641376.jpeg');
+    /* background-image:url('http://www.zhicheng.com/uploadfile/2018/0816/20180816112641376.jpeg'); */
+  }
+  .feedb{
+    font-size: 30px;
   }
   .page{
-    width: auto;
+    width: auto;  
     height: auto;
   }
   .all{
-    margin-top: 8%; 
-    margin-left: 22%;
+    /* margin-top: 20%;  */
+    margin-left: 5%;
   }
   .form{
-    font-size: 35px;
+    font-size: 55px;
     font-family: "Times New Roman",Times,serif;
-    color: white;
+    /* color: white; */
     font-weight: bold;
-    margin-top: 50px;
-    margin-left: 50px;
+    margin-top: 10%;
+    margin-left: 0px;
   }
   .card{
-    margin-left: 50px;
+    margin-left: 0px;
+    width: 100px;
   }
   .pl{
-    color: white;
-    font-size: 23px;
+    /* color: white; */
+    font-size: 20px;
     font-family: "Times New Roman",Times,serif;
     font-weight: bold;
-    margin-top: -15px;
-    margin-left: 50px;
+    margin-top: 0px;
+    margin-left: 0%;
+    margin-right: 5%;
+  }
+  .radiogroup{
+    font-size: 25px;
+    margin-top: 50px;
   }
   .f{
     font-size: 17px;
@@ -128,25 +184,21 @@ export default {
   }
   .describe{
     margin-top: 10px;
-    /* font-size: 20px; */
+    font-size: 30px;
   }
   .question{
-    margin-top: 20px;
+    margin-top: 30px;
     /* font-size: 15px; */
   }
   .tel{
-    margin-top: 20px;
+    margin-top: 30px;
     /* font-size: 15px; */
   }
   .upload{
-    margin-top: 20px;
-    /* font-size: 15px; */
-  }
-  .upbtn{
     margin-top: 5px;
   }
   .click{
-    margin-top: 20px;
+    margin-top: 30px;
   }
 </style>
 
