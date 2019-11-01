@@ -175,6 +175,9 @@ export default {
   .f{
     font-size: 17px;
   }
+  .f{
+    font-size: 17px;
+  }
   .card{
     margin-top: 20px;
     width: 800px;
