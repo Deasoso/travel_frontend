@@ -1,34 +1,42 @@
 <template>
-<body class="kuang">
-  <div class="container">
-      <Button type="primary"  class="returnB">
-            <Icon type="ios-arrow-back"></Icon>
-            返回
-        </Button>
-        <br><br>
-      <header id ="name">尊敬的用户</header>
-      <div class="buttonContainer" style="text-align:center">
-          <div>
-            <Button class="buttonGroup" >全部订单<Icon class="BIcon" type="ios-arrow-forward" /></Button>
-            </div>
-          <div>
-            <Button class="buttonGroup">待付款订单<Icon class="BIcon" type="ios-arrow-forward" /></Button>
-            </div>
-          <div>
-            <Button class="buttonGroup">未出行订单<Icon class="BIcon" type="ios-arrow-forward" /></Button>
-            </div>
-          <div>
-            <Button class="buttonGroup">账号关联<Icon class="BIcon" type="ios-arrow-forward" /></Button>
-            </div>
+  <body class="kuang">
+    <div class="container">
+        <Button type="text"  class="returnB">
+              <Icon type="ios-arrow-back"></Icon>
+              返回
+          </Button>
+        <div id ="name">
+          <Icon type="ios-person"></Icon>
+          尊敬的用户
+          </div>
+        <div class="buttonContainer" style="text-align:center">
+          <Button-group  shape="circle" vertical>
+                <Button class="buttonGroup" >全部订单<Icon class="BIcon" type="ios-arrow-forward" /></Button>
+                <Button class="buttonGroup" >待付款订单<Icon class="BIcon" type="ios-arrow-forward" /></Button>
+                <Button class="buttonGroup" >未出行订单<Icon class="BIcon" type="ios-arrow-forward" /></Button>
+                <Button class="buttonGroup" >账号关联<Icon class="BIcon" type="ios-arrow-forward" /></Button>
+            </Button-group> 
 
-            <br><br>
-          <Button class="tellUs" ghost >
-            <Icon type="ios-call-outline" />
-            联系客服
-            </Button>
-      </div> 
-  </div>
-</body>
+              <Button type="text" class="tellUs" ghost >
+                <Icon type="ios-call-outline" />
+                联系客服
+                </Button>
+        </div> 
+      </div>
+    
+    
+    
+    
+    
+    
+    
+    <!-- <div class="footBar" >
+          <Button-group>
+            <Button class="buttonGroup2">首页</Button>
+            <Button class="buttonGroup2">我的</Button>
+            </Button-group>
+        </div> -->
+    </body>
 </template>
 
 <script>
@@ -45,46 +53,47 @@ module.exports = {
 <style scoped>
 #name{
   position: relative;
-  top: 20px;
-  text-align: center;
+  top: 50px;
+  /* text-align: center; */
   color: aliceblue;
-  font-size: 50px;
+  font-size: 80px;
 }
 .kuang{
   background:url('bcgP.jpg');
-  background-size:100%;
-}
-.container{
-  margin: 0 auto;
+  background-size:100% 100%;
 }
 .returnB{
   position: relative;
   top: 20px;
-  left: 2px;
-  font-size: 20px;
-  height: 50px;
-  width: 15%;
+  font-size: 50px;
+  height: 80px;
+  width: 30%;
 }
 .buttonContainer{
   position: relative;
-  top: 20px;
+  top: 80px;
 }
+
 .buttonGroup{
   position: relative;
-  top: 20px;
+  top: 70px;
   font-size: 40px;
-  height: 70px;
-  width: 70%;
+  height: 90px;
+  width: 700px;
 }
-.BIcon{
+.buttonGroup2{
   position: relative;
-  /* right: 100%; */
+  top: 70px;
+  font-size: 40px;
+  height: 90px;
+  /* width: 100% */
 }
 .tellUs{
   position: relative;
-  top: 20px;
-  font-size: 20px;
-  height: 30px;
-  width: 20%;
+  top: 110px;
+  right: 20px;
+  font-size: 30px;
+  height: 50%;
+  width: 30%;
 }
 </style>

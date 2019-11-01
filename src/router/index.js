@@ -5,6 +5,7 @@ import TodoMVC from '@/pages/TodoMVC/index'
 import product from '@/pages/components/product'
 import feedback from '@/pages/components/feedback'
 import OnePersonalPage from'@/pages/personalPages/OnePersonalPage'
+import indent from '@/pages/Indent/indent'
 
 Vue.use(Router)
 
@@ -35,7 +36,11 @@ export default new Router({
     {
       path: '/person_1',
       name: 'personalPage',
-      component: OnePersonalPage
+      component: OnePersonalPage,
+      path: '/indent',
+      name:'indent',
+      component:indent
+
     }
   ]
 })
