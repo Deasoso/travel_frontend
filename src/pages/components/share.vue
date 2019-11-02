@@ -39,9 +39,9 @@ module.exports = {
 .back{
   position: relative;
   top: 20px;
-  font-size: 40px;
   height: 80px;
   width: 30%;
+  font-size: 50px;
 }
 .shareFront{
   position: relative;
