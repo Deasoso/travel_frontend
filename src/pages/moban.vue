@@ -20,7 +20,5 @@ export default {
 </script>
 
 <style>
-.demo-page{
-  
-}
+
 </style>

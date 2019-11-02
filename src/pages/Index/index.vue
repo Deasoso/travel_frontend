@@ -3,6 +3,7 @@
     <h3 class="title"><span>欢迎打开{{title}}</span></h3>
     <button class="btn" @click="routeDetail">跳转到TodoMVC</button>
     <button class="btn" @click="info">跳转到反馈页面</button>
+     <button class="btn" @click="login">跳转到登录页面</button>
   </div>
 </template>
 
@@ -24,9 +25,15 @@ export default {
       this.$router.push({
         path: '/feedback'
       })
+    },
+    login(){
+    this.$router.push({
+        path: '/login',
+      })
     }
   }
 }
+
 </script>
 
 <style>

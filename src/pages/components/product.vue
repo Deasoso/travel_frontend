@@ -39,7 +39,9 @@ export default {
 </script>
 
 <style>
+/* .demo-page{
 
+} */
 .buttoncss{
   margin-top: 20px
 }
