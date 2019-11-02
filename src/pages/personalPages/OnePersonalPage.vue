@@ -1,10 +1,12 @@
 <template>
   <body class="kuang">
     <div class="container">
+      <div class="returnBar">
         <Button type="text"  class="returnB">
-              <Icon type="ios-arrow-back"></Icon>
-              返回
+            <Icon type="ios-arrow-back"></Icon>
+            返回
           </Button>
+      </div>
         <div id ="name">
           <Icon type="ios-person"></Icon>
           尊敬的用户
@@ -23,19 +25,7 @@
                 </Button>
         </div> 
       </div>
-    
-    
-    
-    
-    
-    
-    
-    <!-- <div class="footBar" >
-          <Button-group>
-            <Button class="buttonGroup2">首页</Button>
-            <Button class="buttonGroup2">我的</Button>
-            </Button-group>
-        </div> -->
+
     </body>
 </template>
 
@@ -64,10 +54,15 @@ module.exports = {
 }
 .returnB{
   position: relative;
-  top: 20px;
+  top: 10px;
   font-size: 50px;
   height: 80px;
   width: 30%;
+  color: rgb(244, 244, 247);
+}
+.returnBar{
+   background-color:rgba(73, 71, 70, 0.5);
+   height: 90px;
 }
 .buttonContainer{
   position: relative;

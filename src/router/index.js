@@ -20,14 +20,12 @@ export default new Router({
       path: '/TodoMVC',
       name: 'TodoMVC',
       component: TodoMVC
-    }
-    ,
+    },
     {
       path: '/product',
       name: 'product',
       component: product
-    }
-    ,
+    },
     {
       path: '/feedback',
       name: 'feedback',
@@ -37,10 +35,11 @@ export default new Router({
       path: '/person_1',
       name: 'personalPage',
       component: OnePersonalPage,
+    },
+    {
       path: '/indent',
       name:'indent',
       component:indent
-
     }
   ]
 })
