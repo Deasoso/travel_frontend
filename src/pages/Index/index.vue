@@ -1,5 +1,6 @@
 <template>
   <div class="demo-page">
+    {{get}}
     <h3 class="title"><span>欢迎打开{{title}}</span></h3>
     <button class="btn" @click="routeDetail">跳转到TodoMVC</button>
     <button class="btn" @click="info">跳转到反馈页面</button>
@@ -8,10 +9,12 @@
 </template>
 
 <script>
+const axios = require('axios');
 export default {
   data () {
     return {
-      title: '示例页面'
+      title: '示例页面',
+      get: 0,
     }
   },
   methods: {
@@ -31,6 +34,13 @@ export default {
         path: '/login',
       })
     }
+  },
+  async created(){
+    // this.get = await axios.post('http://127.0.0.1:8080/post' , {username: 80808080}); // baidu Promise
+    // console.log(this.get)
+    // eos 智能合约 
+    // vue 前端
+    // koa 后端
   }
 }
 
