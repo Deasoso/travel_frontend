@@ -39,15 +39,9 @@ module.exports = {
 .back{
   position: relative;
   top: 20px;
-<<<<<<< Updated upstream
+  height: 80px;
+  width: 30%;
   font-size: 50px;
-  height: 80px;
-  width: 30%;
-}
-=======
-  font-size: 40px;
-  height: 80px;
-  width: 30%;
 }
 .shareFront{
   position: relative;
@@ -55,15 +49,10 @@ module.exports = {
   font-size: 60px;
   top: 200px;
 }
->>>>>>> Stashed changes
 .buttonContainer{
   position: relative;
   top: 80px;
 }
-<<<<<<< Updated upstream
-
-=======
->>>>>>> Stashed changes
 .buttonGroup{
   position: relative;
   top: 400px;
