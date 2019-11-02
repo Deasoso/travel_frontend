@@ -1,7 +1,7 @@
 <template>
   <div class="demo-page">
     <div v-for="(item, index) in data" :key="index" class="buttoncss">
-      <Button type="primary">{{item.name}}</Button>
+    <Button type="primary">{{item.name}}</Button>
     </div>
     <div v-if="bool" @click="methodname">
       bool is true
@@ -30,7 +30,7 @@ export default {
       bool: true 
     }
   },
-  methods: {
+  methods: { 
     methodname () {
       this.bool = false;
     }
@@ -39,9 +39,9 @@ export default {
 </script>
 
 <style>
-/* .demo-page{
-
-} */
+.demo-page{
+  text-align: center;
+}
 .buttoncss{
   margin-top: 20px
 }

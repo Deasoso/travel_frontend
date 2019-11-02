@@ -7,6 +7,7 @@ import product from '@/pages/components/product'
 import feedback from '@/pages/components/feedback'
 import OnePersonalPage from'@/pages/personalPages/OnePersonalPage'
 import indent from '@/pages/Indent/indent'
+import register from '@/pages/components/register'
 
 Vue.use(Router)
 
@@ -27,6 +28,12 @@ export default new Router({
       name: 'login',
       component: product1
     },
+    {
+      path: '/register',
+      name: 'register',
+      component: register
+    }
+    ,
     {
       path: '/product',
       name: 'product',
