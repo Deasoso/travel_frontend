@@ -10,6 +10,8 @@ import indent from '@/pages/Indent/indent'
 import register from '@/pages/components/register'
 import share from '@/pages/components/share'
 
+import comment from '@/pages/components/comment'
+// import test from '@/pages/components/test'
 Vue.use(Router)
 
 export default new Router({
@@ -59,6 +61,10 @@ export default new Router({
       path: '/indent',
       name:'indent',
       component:indent
+    },{
+      path: '/comment',
+      name: 'comment',
+      component:comment
     }
   ]
 })
