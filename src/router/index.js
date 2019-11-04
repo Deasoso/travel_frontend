@@ -9,8 +9,12 @@ import OnePersonalPage from'@/pages/personalPages/OnePersonalPage'
 import indent from '@/pages/Indent/indent'
 import register from '@/pages/components/register'
 import share from '@/pages/components/share'
-
+import home from '@/pages/components/Home/home'
 import comment from '@/pages/components/comment'
+
+import VueAwesomeSwiper from 'vue-awesome-swiper'
+import 'swiper/dist/css/swiper.css'
+Vue.use(VueAwesomeSwiper, /* { default global options } */)
 // import test from '@/pages/components/test'
 Vue.use(Router)
 
@@ -19,7 +23,7 @@ export default new Router({
     {
       path: '/',
       name: 'Index',
-      component: Index
+      component: home//Index
     },
     {
       path: '/TodoMVC',
