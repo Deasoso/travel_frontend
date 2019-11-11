@@ -14,7 +14,11 @@
     "qa-release": "vue-hap release"
   },
   "dependencies": {
+    "@babel/runtime": "^7.7.2",
     "axios": "^0.19.0",
+    "eosjs": "^20.0.0",
+    "scatterjs-core": "^2.7.18",
+    "scatterjs-plugin-eosjs": "^1.5.1",
     "view-design": "^4.0.2",
     "vue": "^2.5.2",
     "vue-awesome-swiper": "^3.1.3",

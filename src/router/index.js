@@ -15,7 +15,7 @@ import comment from '@/pages/components/comment'
 import VueAwesomeSwiper from 'vue-awesome-swiper'
 import 'swiper/dist/css/swiper.css'
 Vue.use(VueAwesomeSwiper, /* { default global options } */)
-// import test from '@/pages/components/test'
+
 Vue.use(Router)
 
 export default new Router({
@@ -35,6 +35,12 @@ export default new Router({
       name: 'login',
       component: product1
     },
+    {
+      path: '/register',
+      name: 'register',
+      component: register
+    }
+    ,
     {
       path: '/register',
       name: 'register',

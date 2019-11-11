@@ -39,6 +39,8 @@
 </template>
  
 <script>
+const API = require('../../../util/api.js');
+
   export default {
     name: 'carrousel',
     data() {
@@ -73,6 +75,11 @@
         ],
         randomMovieList: [],
         jingdianList: [1, 2, 3, 4, 5]
+      }
+    },
+    methods:{
+      functionname(){
+      
       }
     },
     mounted() {
