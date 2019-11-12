@@ -1,5 +1,6 @@
 <template>
   <div>
+    <Button type="success" @click="login">登录</Button>
     <swiper :options="swiperOption">
       <swiper-slide v-for="slide, index in swiperSlides" :key="index">
         <img src="../1.jpeg" height="200px" width="100%"/>
@@ -39,7 +40,7 @@
 </template>
  
 <script>
-const API = require('../../../util/api.js');
+import API from '../../../util/api.js';
 
   export default {
     name: 'carrousel',
@@ -78,12 +79,16 @@ const API = require('../../../util/api.js');
       }
     },
     methods:{
-      functionname(){
-      
+      async login(){
+        console.log("logging..");
+        const identity = await API.loginScatterAsync();
+        console.log("login result:", identity);
       }
     },
-    mounted() {
-
+    async mounted() {
+      console.log('Connecting to Scatter desktop...');
+      const connected = await API.connectScatterAsync();
+      console.log('Connect Scatter result: ', connected);
     }
   }
 </script>
