@@ -13,6 +13,16 @@ const eos = () => ScatterJS.scatter.eos(config.network, Eos, { expireInSeconds: 
 const currentEOSAccount = () => ScatterJS.scatter.identity && ScatterJS.scatter.identity.accounts.find(x => x.blockchain === 'eos');
 
 const API = {
+  async getchaincode() {
+    const { rows } = await eos().getTableRows({
+      json: true,
+      code: 'ceshiyongeos',
+      scope: 'ceshiyongeos',
+      table: 'user',
+      limit: 1024,
+    });
+    return rows;
+  },
   async getBalancesByContract({ tokenContract = 'eosio.token', accountName, symbol }) {
     return eos().getCurrencyBalance(tokenContract, accountName, symbol);
   },

@@ -83,6 +83,8 @@ import API from '../../../util/api.js';
         console.log("logging..");
         const identity = await API.loginScatterAsync();
         console.log("login result:", identity);
+        const table = await API.getchaincode();
+        console.log(table);
       }
     },
     async mounted() {
