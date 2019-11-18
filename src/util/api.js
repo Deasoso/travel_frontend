@@ -18,18 +18,19 @@ const API = {
       json: true,
       code: 'ceshiyongeos',
       scope: 'ceshiyongeos',
-      table: 'user',
+      table: 'merchant',
       limit: 1024,
     });
     return rows;
   },
-  async AddorderAsync(
+  async AddmerchantAsync(
     from = currentEOSAccount(),
   ){
     const contract = await eos().contract('ceshiyongeos');
-    await contract.joinbuybackq(
-      from.name,
-      PriceFormatter.formatPriceToCCC(amount),
+    await contract.addmerchant(
+      "helloworld12",
+      "1.9000 EOS",
+      "12.9000 EOS",
       {
         authorization: [`${from.name}@${from.authority}`],
       },

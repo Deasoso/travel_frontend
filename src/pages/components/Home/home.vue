@@ -1,6 +1,8 @@
 <template>
   <div>
     <Button type="success" @click="login">登录</Button>
+    <Button type="success" @click="getchaincode">获取链上数据</Button>
+    <Button type="success" @click="dochain">执行链上方法</Button>
     <swiper :options="swiperOption">
       <swiper-slide v-for="slide, index in swiperSlides" :key="index">
         <img src="../1.jpeg" height="200px" width="100%"/>
@@ -83,8 +85,16 @@ import API from '../../../util/api.js';
         console.log("logging..");
         const identity = await API.loginScatterAsync();
         console.log("login result:", identity);
+      },
+      async getchaincode(){
+        console.log("getting chain code...")
         const table = await API.getchaincode();
         console.log(table);
+      },
+      async dochain(){
+        console.log("doing chain code...")
+        const merchant = await API.AddmerchantAsync();
+        console.log(merchant)
       }
     },
     async mounted() {
