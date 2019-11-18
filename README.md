@@ -24,17 +24,17 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 
 - 用户
 
-1、主页（搜索，推送，etc..） deasoso
+1、主页（搜索，推送，etc..） LaoSiLin
 2、登陆 angela-hqt
 3、注册 syrs413
 4、个人 c2square
 5、商品展示 lcl990403
 6、评论 liujunchi-bot
-7、分享 ksrun
-8、单个商品信息 zhychestercheung
-9、商家信息 kino
-10、反馈页面 yonminma
-11、订单 ric1988210
+7、分享 llbthxf
+8、单个商品信息 kuniup
+9、商家信息 ZhuBangCSDN
+10、反馈页面 LuoYi
+11、订单 ZhuLu
 
 - 商家页
 

@@ -1,11 +1,14 @@
 <template>
   <div>
+    <za-cell title="数字">
+      <za-input-number v-model="v5" type="number" placeholder="type is number" @change="handleChange"></za-input-number>
+    </za-cell>
     <Button type="success" @click="login">登录</Button>
     <Button type="success" @click="getchaincode">获取链上数据</Button>
     <Button type="success" @click="dochain">执行链上方法</Button>
     <swiper :options="swiperOption">
       <swiper-slide v-for="slide, index in swiperSlides" :key="index">
-        <img src="../1.jpeg" height="200px" width="100%"/>
+        <img src="./1.jpeg" height="200px" width="100%"/>
       </swiper-slide>
       <div class="swiper-pagination" slot="pagination"></div>
     </swiper>
@@ -24,7 +27,7 @@
         </a>
         <!-- <ul> -->
           <div class="leftcard">
-            <img src="../1.jpeg" height="80px" width="100%"/>
+            <img src="./1.jpeg" height="80px" width="100%"/>
           </div>
           <div class="rightcard">
             <li v-for="item, index in movieList" :key="index">
@@ -111,7 +114,7 @@ import API from '../../../util/api.js';
   margin-top: 0px;
 }
 .background{
-  background-image: url('../1.jpeg');
+  background-image: url('./1.jpeg');
   margin-bottom: 10px;
 }
 .leftcard{

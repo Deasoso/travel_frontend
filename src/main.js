@@ -4,10 +4,18 @@ import Vue from 'vue'
 import App from './app'
 import store from './store'
 import router from './router'
+
 import ViewUI from 'view-design';
 import 'view-design/dist/styles/iview.css';
-
 Vue.use(ViewUI);
+
+import zarmVue from 'zarm-vue';
+import 'zarm-vue/zarm-vue.default.css';
+Vue.use(zarmVue);
+
+import VueAwesomeSwiper from 'vue-awesome-swiper'
+import 'swiper/dist/css/swiper.css'
+Vue.use(VueAwesomeSwiper, /* { default global options } */)
 
 Vue.config.productionTip = false
 

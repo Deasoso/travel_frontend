@@ -1,21 +1,8 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Index from '@/pages/Index/index'
-import TodoMVC from '@/pages/TodoMVC/index'
-import product1 from '@/pages/components/login'
-import product from '@/pages/components/product'
-import feedback from '@/pages/components/feedback'
-import OnePersonalPage from'@/pages/personalPages/OnePersonalPage'
-import indent from '@/pages/Indent/indent'
-import register from '@/pages/components/register'
-import share from '@/pages/components/share'
 import home from '@/pages/components/Home/home'
-import comment from '@/pages/components/comment'
-import productslist from '@/pages/components/productslist'
-
-import VueAwesomeSwiper from 'vue-awesome-swiper'
-import 'swiper/dist/css/swiper.css'
-Vue.use(VueAwesomeSwiper, /* { default global options } */)
+import moban from '@/pages/moban'
+import login from '@/pages/components/Login/Login'
 
 Vue.use(Router)
 
@@ -24,45 +11,19 @@ export default new Router({
     {
       path: '/',
       name: 'Index',
-      component: home//Index
+      component: home
     },
     {
-      path: '/TodoMVC',
-      name: 'TodoMVC',
-      component: TodoMVC
+      path: '/moban',
+      name: 'Moban',
+      component: moban
     },
     {
       path: '/login',
-      name: 'login',
-      component: product1
+      name: 'Login',
+      component: login
     },
-    {
-      path: '/register',
-      name: 'register',
-      component: register
-    }
-    ,
-    {
-      path: '/register',
-      name: 'register',
-      component: register
-    }
-    ,
-    {
-      path: '/product',
-      name: 'product',
-      component: product
-    },
-    {
-      path: '/feedback',
-      name: 'feedback',
-      component: feedback
-    },
-    {
-      path: '/share',
-      name: 'share',
-      component: share
-    },
+<<<<<<< Updated upstream
     {
       path: '/person_1',
       name: 'personalPage',
@@ -83,5 +44,7 @@ export default new Router({
       name: 'productslist',
       component: productslist
     }
+=======
+>>>>>>> Stashed changes
   ]
 })
