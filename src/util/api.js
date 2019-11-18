@@ -23,6 +23,18 @@ const API = {
     });
     return rows;
   },
+  async AddorderAsync(
+    from = currentEOSAccount(),
+  ){
+    const contract = await eos().contract('ceshiyongeos');
+    await contract.joinbuybackq(
+      from.name,
+      PriceFormatter.formatPriceToCCC(amount),
+      {
+        authorization: [`${from.name}@${from.authority}`],
+      },
+    );
+  },
   async getBalancesByContract({ tokenContract = 'eosio.token', accountName, symbol }) {
     return eos().getCurrencyBalance(tokenContract, accountName, symbol);
   },
