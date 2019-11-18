@@ -4,7 +4,6 @@ import Index from '@/pages/Index/index'
 import TodoMVC from '@/pages/TodoMVC/index'
 import product1 from '@/pages/components/login'
 import product from '@/pages/components/product'
-<<<<<<< Updated upstream
 import feedback from '@/pages/components/feedback'
 import OnePersonalPage from'@/pages/personalPages/OnePersonalPage'
 import indent from '@/pages/Indent/indent'
@@ -12,13 +11,11 @@ import register from '@/pages/components/register'
 import share from '@/pages/components/share'
 import home from '@/pages/components/Home/home'
 import comment from '@/pages/components/comment'
+import productslist from '@/pages/components/productslist'
 
 import VueAwesomeSwiper from 'vue-awesome-swiper'
 import 'swiper/dist/css/swiper.css'
 Vue.use(VueAwesomeSwiper, /* { default global options } */)
-=======
-import productslist from '@/pages/components/productslist'
->>>>>>> Stashed changes
 
 Vue.use(Router)
 
