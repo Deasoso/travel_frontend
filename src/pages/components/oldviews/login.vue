@@ -49,7 +49,7 @@ export default {
 
 .image{
   padding-top: 250px;
-  background:url('timg1.jpg') no-repeat center center;
+  background:url('https://edu-image.nosdn.127.net/bfcfb254a0324c159c50434e98aaac1f.png?imageView&quality=100') no-repeat center center;
   position: fixed;
   width:100%;
   height:100%;

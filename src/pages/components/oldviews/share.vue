@@ -33,7 +33,7 @@ module.exports = {
   font-size: 40px;
 }
 .backGroundPicture{
-  background:url('../../assets/share.jpeg');
+  background:url('https://edu-image.nosdn.127.net/bfcfb254a0324c159c50434e98aaac1f.png?imageView&quality=100');
   background-size:100% 100%;
 }
 .back{

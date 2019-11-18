@@ -49,7 +49,7 @@ module.exports = {
   font-size: 80px;
 }
 .kuang{
-  background:url('bcgP.jpg');
+  background:url('https://edu-image.nosdn.127.net/bfcfb254a0324c159c50434e98aaac1f.png?imageView&quality=100');
   background-size:100% 100%;
 }
 .returnB{

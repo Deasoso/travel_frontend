@@ -8,7 +8,7 @@
     <Button type="success" @click="dochain">执行链上方法</Button>
     <swiper :options="swiperOption">
       <swiper-slide v-for="slide, index in swiperSlides" :key="index">
-        <img src="./1.jpeg" height="200px" width="100%"/>
+        <img src="https://edu-image.nosdn.127.net/bfcfb254a0324c159c50434e98aaac1f.png?imageView&quality=100" height="200px" width="100%"/>
       </swiper-slide>
       <div class="swiper-pagination" slot="pagination"></div>
     </swiper>
@@ -27,7 +27,7 @@
         </a>
         <!-- <ul> -->
           <div class="leftcard">
-            <img src="./1.jpeg" height="80px" width="100%"/>
+            <img src="https://edu-image.nosdn.127.net/bfcfb254a0324c159c50434e98aaac1f.png?imageView&quality=100" height="80px" width="100%"/>
           </div>
           <div class="rightcard">
             <li v-for="item, index in movieList" :key="index">
@@ -114,7 +114,7 @@ import API from '../../../util/api.js';
   margin-top: 0px;
 }
 .background{
-  background-image: url('./1.jpeg');
+  background-image: url('https://edu-image.nosdn.127.net/bfcfb254a0324c159c50434e98aaac1f.png?imageView&quality=100');
   margin-bottom: 10px;
 }
 .leftcard{

@@ -43,7 +43,7 @@ export default {
 }
 .image{
   padding-top: 130px;
-  background:url('1.jpeg') no-repeat center;
+  background:url('https://edu-image.nosdn.127.net/bfcfb254a0324c159c50434e98aaac1f.png?imageView&quality=100') no-repeat center;
   position: fixed;
   width:100%;
   height:100%;
