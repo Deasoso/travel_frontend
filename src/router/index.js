@@ -23,28 +23,5 @@ export default new Router({
       name: 'Login',
       component: login
     },
-<<<<<<< Updated upstream
-    {
-      path: '/person_1',
-      name: 'personalPage',
-      component: OnePersonalPage,
-    },
-    {
-      path: '/indent',
-      name:'indent',
-      component:indent
-    },{
-      path: '/comment',
-      name: 'comment',
-      component:comment
-    }
-    ,
-    {
-      path: '/productslist',
-      name: 'productslist',
-      component: productslist
-    }
-=======
->>>>>>> Stashed changes
   ]
 })
