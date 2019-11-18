@@ -41,6 +41,11 @@ export default {
 <style>
 .demo-page{
   text-align: center;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .buttoncss{
   margin-top: 20px
