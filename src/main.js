@@ -13,6 +13,9 @@ import zarmVue from 'zarm-vue';
 import 'zarm-vue/zarm-vue.default.css';
 Vue.use(zarmVue);
 
+import { Icon } from 'zarm-vue';
+Icon.createSymbolIconfont('//at.alicdn.com/t/font_1340918_4p9b5skcr79.js');
+
 import VueAwesomeSwiper from 'vue-awesome-swiper'
 import 'swiper/dist/css/swiper.css'
 Vue.use(VueAwesomeSwiper, /* { default global options } */)
