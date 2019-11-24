@@ -11,6 +11,7 @@ Vue.use(ViewUI);
 
 import zarmVue from 'zarm-vue';
 import 'zarm-vue/zarm-vue.default.css';
+
 Vue.use(zarmVue);
 
 import { Icon } from 'zarm-vue';
