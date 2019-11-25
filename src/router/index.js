@@ -11,6 +11,7 @@ import feedback from '@/pages/components/Feedback/feedback'
 import fbnew from '@/pages/components/Feedback/feedback1'
 import Feedback1 from '@/pages/components/oldviews/feedback'
 import moban from '@/pages/moban'
+import one from '@/pages/components/order/one'
 
 Vue.use(Router)
 
@@ -65,6 +66,11 @@ export default new Router({
       path: '/test',
       name: 'test',
       component: test
+    },
+    {
+      path: '/one',
+      name: 'one',
+      component: one
     },
   ]
 })
