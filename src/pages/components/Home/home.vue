@@ -45,9 +45,13 @@
 </template>
  
 <script>
-import API from '../../../util/api.js';
+// import API from '../../../util/api.js';
+import global from '../../global/global.vue'
 
   export default {
+    components:{
+      Global123: global,
+    },
     name: 'carrousel',
     data() {
       return {
@@ -86,23 +90,28 @@ import API from '../../../util/api.js';
     methods:{
       async login(){
         console.log("logging..");
-        const identity = await API.loginScatterAsync();
+        const identity = await global.API.loginScatterAsync();
+        // const identity = await API.loginScatterAsync();
         console.log("login result:", identity);
       },
       async getchaincode(){
         console.log("getting chain code...")
-        const table = await API.getchaincode();
+        const table = await global.API.getchaincode();
+        // const table = await API.getchaincode();
         console.log(table);
       },
       async dochain(){
         console.log("doing chain code...")
-        const merchant = await API.AddmerchantAsync();
+        const merchant = await global.API.AddmerchantAsync();
+        // const merchant = await API.AddmerchantAsync();
         console.log(merchant)
       }
     },
     async mounted() {
+      global.name = '123';
       console.log('Connecting to Scatter desktop...');
-      const connected = await API.connectScatterAsync();
+      const connected = await global.API.connectScatterAsync();
+      // const connected = await API.connectScatterAsync();
       console.log('Connect Scatter result: ', connected);
     }
   }

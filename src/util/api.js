@@ -23,6 +23,16 @@ const API = {
     });
     return rows;
   },
+  async getOrders() {
+    const { rows } = await eos().getTableRows({
+      json: true,
+      code: 'ceshiyongeos',
+      scope: 'ceshiyongeos',
+      table: 'order',
+      limit: 1024,
+    });
+    return rows;
+  },
   async AddmerchantAsync(
     from = currentEOSAccount(),
   ){

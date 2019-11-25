@@ -31,7 +31,7 @@
 
 
 <div class="order" style="margin-top:10px">
-    <za-cell is-link title="我的订单" has-arrow @click="() => {}">
+    <za-cell is-link title="我的订单" has-arrow @click="getOrders">
       <div slot="description">查看全部订单</div>
       </za-cell>
     <za-cell>
@@ -147,8 +147,10 @@
 </template>
 
 <script>
+import global from '../../global/global.vue'
+// import API from '../../../util/api.js';
 
-module.exports = {
+export default  {
   data() {
     return {
       pic: ['https://i.52112.com/icon/jpg/256/20190404/35164/1704416.jpg',
@@ -169,6 +171,20 @@ module.exports = {
                 'https://i.52112.com/icon/jpg/256/20191004/61535/2714020.jpg'],
       title: '个人中心',
     }
+  },
+  methods:{
+      async getOrders(){
+        console.log("getting Orders massage...")
+        const table = await global.API.getchaincode();
+        // const table = await API.getchaincode();
+        console.log(table);
+      }
+  },
+  async mounted() {
+    console.log('Connecting to Scatter desktop...');
+    const connected = await global.API.connectScatterAsync();
+    // const connected = await API.connectScatterAsync();
+    console.log('Connect Scatter result: ', connected);
   }
 }
 </script>
