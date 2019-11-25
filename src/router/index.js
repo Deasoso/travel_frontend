@@ -12,7 +12,7 @@ import fbnew from '@/pages/components/Feedback/feedback1'
 import Feedback1 from '@/pages/components/oldviews/feedback'
 import moban from '@/pages/moban'
 import one from '@/pages/components/order/one'
-
+import product from '@/pages/components/Product/product'
 Vue.use(Router)
 
 export default new Router({
@@ -71,6 +71,10 @@ export default new Router({
       path: '/one',
       name: 'one',
       component: one
-    },
+    },{
+      path: '/product',
+      name: 'product',
+      component: product
+    }
   ]
 })
