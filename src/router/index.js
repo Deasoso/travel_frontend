@@ -10,6 +10,7 @@ import Login from '@/pages/components/Login/Login'
 import feedback from '@/pages/components/Feedback/feedback'
 import fbnew from '@/pages/components/Feedback/feedback1'
 import Feedback1 from '@/pages/components/oldviews/feedback'
+import moban from '@/pages/moban'
 
 Vue.use(Router)
 
