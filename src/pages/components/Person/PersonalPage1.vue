@@ -1,5 +1,15 @@
 <template>
 <div>
+  <za-nav-bar>
+  <div slot="left">
+    <za-icon theme="primary" type="arrow-left" ></za-icon>
+  </div>
+  <div slot="title">个人中心</div>
+  <div slot="right">
+    <za-icon theme="primary" type="add" ></za-icon>
+    <za-icon theme="primary" type="question-round" ></za-icon>
+  </div>
+</za-nav-bar>
   <div class="Title">
     <img class="head_img" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1574503765396&di=e08c280212c417787491efe73c108d69&imgtype=0&src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fitem%2F201507%2F07%2F20150707225339_NxT3C.jpeg" />
     <div class="User-name">{{title}}</div>
@@ -62,7 +72,7 @@
     </za-cell>
 </div>
 
-  <div class="tools" style="margin-top:30px">
+  <div class="tools" style="margin-top:20px">
     <za-cell is-link title="我的工具" has-arrow @click="() => {}">
       <div slot="description">查看更多</div>
       </za-cell>
@@ -126,7 +136,7 @@
 
 
 <za-cell>
-  <za-tab-bar :visible="visible" :defaultActiveKey="3" @change="handleChange" class="footbar">
+  <za-tab-bar :visible="visible" :defaultActiveKey="3" class="footbar">
 
     <za-tab-bar-item :item-key="1" title="首页" @click="handleClick">
         <za-icon slot="icon" tag="symbol" type="home" class="icon"></za-icon>
@@ -169,7 +179,7 @@ export default  {
                 'https://i.52112.com/icon/jpg/256/20180703/17304/909052.jpg',
                 'https://i.52112.com/icon/jpg/256/20170707/7422/454059.jpg',
                 'https://i.52112.com/icon/jpg/256/20191004/61535/2714020.jpg'],
-      title: '个人中心',
+      title: '帅气小刘',
     }
   },
   methods:{
@@ -210,13 +220,13 @@ export default  {
   display: inline-block;
   width: 10%;
   margin-left: 12%;
-  margin-top: 10px;
+  margin-top: 30px;
 }
 .tool_box{
   display: inline-block;
   width: 12%;
-  margin-left: 13%;
-  margin-top: 10px;
+  margin-left: 15%;
+  margin-top: 30px;
 }
 .message{
   display: inline-block;
